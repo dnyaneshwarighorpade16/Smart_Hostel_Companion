@@ -1,0 +1,92 @@
+# =========================
+# Flutter / Dart
+# =========================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+build/
+coverage/
+
+# =========================
+# Android
+# =========================
+android/.gradle/
+android/app/build/
+android/local.properties
+android/key.properties
+
+# =========================
+# iOS
+# =========================
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/App.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/ephemeral/
+
+# =========================
+# macOS / Windows / Linux
+# =========================
+macos/Flutter/ephemeral/
+windows/flutter/ephemeral/
+linux/flutter/ephemeral/
+
+# =========================
+# Web
+# =========================
+build/web/
+
+# =========================
+# IDEs
+# =========================
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# Logs & Temp
+# =========================
+*.log
+*.tmp
+*.swp
+*.class
+*.pyc
+.DS_Store
+
+# =========================
+# Firebase (VERY IMPORTANT 🔥)
+# =========================
+google-services.json
+GoogleService-Info.plist
+
+# Optional (depends on team usage)
+# firebase_options.dart
+
+# =========================
+# Misc
+# =========================
+.history
+.svn/
+.build/
+.buildlog/
+.swiftpm/
+migrate_working_dir/
+
+# =========================
+# Symbolication / Obfuscation
+# =========================
+app.*.symbols
+app.*.map.json
+
+# =========================
+# Android build outputs
+# =========================
+/android/app/debug
+/android/app/profile
+/android/app/release
