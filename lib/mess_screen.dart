@@ -1,0 +1,199 @@
+import 'package:flutter/material.dart';
+import '../app_colours.dart';
+
+class MessScreen extends StatefulWidget {
+  const MessScreen({super.key});
+
+  @override
+  State<MessScreen> createState() => _MessScreenState();
+}
+
+class _MessScreenState extends State<MessScreen> {
+ 
+
+
+  Widget vendorCard(String name, String place) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Row(
+          children: [
+            const CircleAvatar(radius: 20),
+            const SizedBox(width: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(name,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                Text(place, style: const TextStyle(color: Colors.grey)),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget mealCard({
+    required String title,
+    required String time,
+    required String menu,
+   
+  }) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 14),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.restaurant),
+              const SizedBox(width: 8),
+              Text(title,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.bold)),
+              const Spacer(),
+              Text(time, style: const TextStyle(color: Colors.grey)),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(menu),
+          const SizedBox(height: 8),
+          const Divider(),
+          Row(
+            children: [
+              const CircleAvatar(radius: 16),
+              const SizedBox(width: 8),
+            
+              const SizedBox(width: 6),
+       
+             
+              const Spacer(),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // 🔹 HEADER
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Mess Menu",
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold)),
+                      Text("Central Hostel Dining Hall",
+                          style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
+                  Icon(Icons.notifications_none),
+                ],
+              ),
+              
+
+              const SizedBox(height: 20),
+
+              // 🔹 VENDORS
+              const Text("On Duty Today",
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  vendorCard("Elite Catering", "Main Kitchen"),
+                  const SizedBox(width: 10),
+                  vendorCard("Spice Route", "South Wing"),
+                ],
+              ),
+
+              const SizedBox(height: 20),
+
+              // 🔹 MENU TITLE
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text("Today's Menu",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  Chip(label: Text("Veg Only")),
+                ],
+              ),
+
+              const SizedBox(height: 10),
+
+              // 🔹 MEALS
+              mealCard(
+                title: "Breakfast",
+                time: "07:30 – 09:30 AM",
+                menu:
+                    "Masala Dosa, Sambhar, Coconut Chutney, Boiled Eggs, Seasonal Fruits\nSpecial: Filter Coffee",
+             
+               
+              ),
+              mealCard(
+                title: "Lunch",
+                time: "12:30 – 02:30 PM",
+                menu:
+                    "Paneer Butter Masala, Dal Tadka, Jeera Rice, Butter Naan, Fresh Salad",
+               
+              ),
+              mealCard(
+                title: "Dinner",
+                time: "07:30 – 09:30 PM",
+                menu:
+                    "Veg Pulao, Mix Veg Curry, Roti, Curd, Gulab Jamun\nSpecial: Gulab Jamun",
+               
+               
+              ),
+
+              const SizedBox(height: 40),
+            ],
+          ),
+        ),
+      ),
+
+      // 🔹 BOTTOM BAR
+      bottomNavigationBar: Container(
+        margin: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: AppColors.primary,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: const Row(
+          children: [
+            Expanded(
+              child: Text(
+                "Mark your attendance to avoid wastage",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+      
+          ],
+        ),
+      ),
+    );
+  }
+}

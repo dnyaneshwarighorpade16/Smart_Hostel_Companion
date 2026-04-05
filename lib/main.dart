@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart'; // ✅ ADD THIS
 import 'firebase_options.dart';
-import 'features/home/home_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform, // ✅ FIX
+    options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // 🔴 TEMP RESET
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.clear();
 
   runApp(const SmartHostelApp());
 }
@@ -20,7 +25,7 @@ class SmartHostelApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: AuthCheck(),
     );
   }
 }
