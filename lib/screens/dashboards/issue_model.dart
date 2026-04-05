@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../app_colours.dart';import 'package:smart_hostel_app/services/issue_service.dart';
+import 'package:smart_hostel_app/app_colours.dart';
+import 'package:smart_hostel_app/screens/dashboards/issue_service.dart';
 
 class IssuesScreen extends StatefulWidget {
   const IssuesScreen({super.key});

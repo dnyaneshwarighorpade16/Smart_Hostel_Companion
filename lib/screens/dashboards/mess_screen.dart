@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../app_colours.dart';
+import 'package:smart_hostel_app/app_colours.dart';
 
 class MessScreen extends StatefulWidget {
   const MessScreen({super.key});

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smart_hostel_app/app_colours.dart';
+
 
 class GuestEntryScreen extends StatelessWidget {
   const GuestEntryScreen({super.key});

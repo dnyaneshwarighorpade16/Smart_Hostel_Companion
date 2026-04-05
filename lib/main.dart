@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:shared_preferences/shared_preferences.dart'; // ✅ ADD THIS
 import 'firebase_options.dart';
-
+import 'package:smart_hostel_app/screens/auth/auth_check.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,9 +23,9 @@ class SmartHostelApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthCheck(),
+   home: const AuthCheck(),
     );
   }
 }

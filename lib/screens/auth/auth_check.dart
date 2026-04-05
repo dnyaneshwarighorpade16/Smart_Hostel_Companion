@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smart_hostel_app/features/home/home_screen.dart';
-import 'login_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/home_screen.dart';
+import 'package:smart_hostel_app/screens/auth/login_screen.dart';
 
 class AuthCheck extends StatefulWidget {
   const AuthCheck({super.key});

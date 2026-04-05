@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:smart_hostel_app/features/guest/presentation/guest_entry_screen.dart';
-import 'package:smart_hostel_app/features/doctor/doctor_screen.dart';
-import 'package:smart_hostel_app/features/events/events_screen.dart';
-import 'package:smart_hostel_app/features/housekeeping/housekeeping_screen.dart';
-import 'package:smart_hostel_app/features/issues/issue_screen.dart';
-import 'package:smart_hostel_app/features/leave/leave_screen.dart';
-import 'package:smart_hostel_app/features/mess/mess_screen.dart';
-import 'package:smart_hostel_app/features/outpass/outpass_screen.dart';
-import 'package:smart_hostel_app/features/parcel/parcel_screen.dart';
-import 'package:smart_hostel_app/screens/profile/profile_screen.dart';
-import 'package:smart_hostel_app/features/alerts/alerts_screen.dart';
-import 'package:flutter/services.dart';
-import '../app_colours.dart';import 'package:shared_preferences/shared_preferences.dart';
-import 'package:smart_hostel_app/features/auth/login_screen.dart';
 
+import 'package:smart_hostel_app/screens/dashboards/guest_entry_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/doctor_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/events_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/housekeeping_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/issue_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/leave_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/mess_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/outpass_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/parcel_screen.dart';
+import 'package:smart_hostel_app/screens/dashboards/alerts_screen.dart';
+
+import 'package:smart_hostel_app/screens/dashboards/profile_screen.dart';
+
+import 'package:flutter/services.dart';
+import 'package:smart_hostel_app/app_colours.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smart_hostel_app/screens/auth/login_screen.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 

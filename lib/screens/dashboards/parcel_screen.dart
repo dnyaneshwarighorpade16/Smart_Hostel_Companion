@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../app_colours.dart';
+import 'package:smart_hostel_app/app_colours.dart';
 class ParcelScreen extends StatelessWidget {
   const ParcelScreen({super.key});
 

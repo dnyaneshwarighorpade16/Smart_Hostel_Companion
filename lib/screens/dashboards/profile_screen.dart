@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../app_colours.dart';
-import 'package:smart_hostel_app/features/auth/login_screen.dart';
+import 'package:smart_hostel_app/app_colours.dart';
+import 'package:smart_hostel_app/screens/auth/login_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   final VoidCallback onBack;

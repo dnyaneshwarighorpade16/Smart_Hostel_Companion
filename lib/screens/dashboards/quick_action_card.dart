@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../app_colours.dart';
-
+import 'package:smart_hostel_app/app_colours.dart';
 class QuickActionCard extends StatelessWidget {
   final String title;
   final IconData icon;

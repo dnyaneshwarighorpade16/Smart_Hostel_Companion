@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import '../app_colours.dart';
+import 'package:smart_hostel_app/app_colours.dart';
 class OutpassScreen extends StatelessWidget {
   const OutpassScreen({super.key});
 
